@@ -1,5 +1,14 @@
 def reverse_string(str)
   # type your code in here
+#input: hello world
+#output: dlrow olleh
+#split string into array
+#reverse array
+#join array into string
+#return string
+
+return str.split("").reverse.join("")
+
 end
 
 if __FILE__ == $PROGRAM_NAME
