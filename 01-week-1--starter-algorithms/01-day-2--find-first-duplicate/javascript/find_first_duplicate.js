@@ -1,5 +1,25 @@
 function findFirstDuplicate(arr) {
   // type your code here
+  // let set = new Set();
+  //  set.add(arr[0]);
+  // for i = 1 to arr.length - 1
+  //  if set.has(arr[i]) return arr[i]
+  // set.add(arr[i]);
+  // end
+  // return -1
+
+  let set = new Set();
+  set.add(arr[0]);
+
+  for(let i = 1; i < arr.length; i++) {
+    if(set.has(arr[i])) {
+      return arr[i];
+    } 
+    set.add(arr[i]);
+  }
+
+  return -1;
+
 }
 
 if (require.main === module) {
