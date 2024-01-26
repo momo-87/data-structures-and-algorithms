@@ -1,5 +1,20 @@
 def find_first_duplicate(arr)
   # type your code in here
+  # const set = new Set()
+  # arr.each do |item|
+  #   if set.has(item) return item
+  #   set.add(item)
+  # end
+  # return -1
+
+  set = Set.new;
+  
+  arr.each do |item|
+    return item if set.include?(item) 
+    set << item
+  end
+  return -1
+
 end
 
 if __FILE__ == $PROGRAM_NAME
