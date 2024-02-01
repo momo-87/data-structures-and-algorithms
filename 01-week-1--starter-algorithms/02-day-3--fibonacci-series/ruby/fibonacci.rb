@@ -1,5 +1,15 @@
 def fibonacci(num)
   # type your code in here
+  fibo = [0, 1]
+
+  return 0 if num === 0
+  return 1 if num === 1
+  for i in 2..num do
+    fibo[i] = fibo[i-2] + fibo[i-1]
+  end
+
+  return fibo[num]
+
 end
 
 if __FILE__ == $PROGRAM_NAME
