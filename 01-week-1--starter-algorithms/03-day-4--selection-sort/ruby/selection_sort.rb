@@ -1,5 +1,20 @@
 def selection_sort(arr)
   # type your code in here
+  sortedArr = []
+
+  while arr.length > 0
+    min = arr.min()
+
+    n = arr.length - arr.select{ |elt| elt > min}.length
+
+    for i in 1..n do
+      sortedArr << min
+    end
+    
+    arr = arr.select{ |elt| elt > min}
+  end
+
+  sortedArr
 end
 
 if __FILE__ == $PROGRAM_NAME
